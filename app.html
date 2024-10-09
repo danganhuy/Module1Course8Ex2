@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>App</title>
+</head>
+<body>
+    <div>What is the official name of javascript?</div>
+    <label><input id="answer" type="text" name="answer" placeholder="Your answer"></label>
+    <button type="button" id="button">Submit</button>
+    <div id="result"></div>
+    <script>
+        function CheckAnswer() {
+            let answer = document.getElementById("answer").value;
+            let s;
+            if (answer === "ECMAScript")
+                s = "Correct"
+            else
+                s = "Didn’t know? It's ECMAScript!"
+            document.getElementById("result").innerHTML = s;
+        }
+        document.getElementById("button").addEventListener("click", CheckAnswer)
+    </script>
+</body>
+</html>
